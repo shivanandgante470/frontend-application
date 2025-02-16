@@ -1,0 +1,33 @@
+name: Docker Image build
+
+on:
+  push:
+    branches: 
+    - main
+    - feature/*
+    
+  pull_request:
+    branches: [ "main" ]
+
+
+  workflow_dispatch:
+    inputs:
+      logLevel:
+      description: 'Select Environment'
+      required: true
+      default: 'dev'
+
+jobs:
+
+  build:
+    name: Build Docker image and push to repositories
+    runs-on: ubuntu-latest
+
+    # steps:
+    #   - name: Checkout code
+    #     uses: actions/checkout@v3
+
+    steps:
+    - run: |
+      echo "Log level: ${{ github.event.inputs.logLevel }}"
+      echo "Tags: ${{ github.event.inputs.tags }}"
