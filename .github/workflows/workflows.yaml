@@ -7,19 +7,19 @@ name: Docker Image build
 # or API.
 on:
   workflow_dispatch:
-  # push:
-  #   branches: 
-  #     - main  # Automatically trigger on push to main
-  #     # - feature
-  # pull_request:
-  #   branches: 
-  #     - main  # Automatically trigger on pull requests to main
-  # workflow_dispatch:
-  #   inputs:
-  #     logLevel:
-  #       description: 'Select Environment'
-  #       required: true
-  #       default: 'dev'
+    inputs:
+      logLevel:
+        description: 'Select Environment'
+        required: true
+        default: 'dev'
+  push:
+    branches: 
+      - main  # Automatically trigger on push to main
+      - feature
+  pull_request:
+    branches: 
+      - main  # Automatically trigger on pull requests to main
+
 
 jobs:
   build:
