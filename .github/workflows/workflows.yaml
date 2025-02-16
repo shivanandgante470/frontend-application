@@ -4,7 +4,7 @@ on:
   push:
     branches: 
       - main  # Automatically trigger on push to main
-      - feature
+      # - feature
   pull_request:
     branches: 
       - main  # Automatically trigger on pull requests to main
