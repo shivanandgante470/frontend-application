@@ -1,10 +1,26 @@
-name: Docker Image build
-# name: Manual workflow
+# name: Docker Image build
+# # name: Manual workflow
+# # on:
+
+
+# # Controls when the action will run. Workflow runs when manually triggered using the UI
+# # or API.
 # on:
+#   workflow_dispatch:
+#     inputs:
+#       logLevel:
+#         description: 'Select Environment'
+#         required: true
+#         default: 'dev'
+#   push:
+#     branches: 
+#       - main  # Automatically trigger on push to main
+#       - feature
+#   pull_request:
+#     branches: 
+#       - main  # Automatically trigger on pull requests to main
+name: Docker Image build
 
-
-# Controls when the action will run. Workflow runs when manually triggered using the UI
-# or API.
 on:
   workflow_dispatch:
     inputs:
@@ -14,11 +30,11 @@ on:
         default: 'dev'
   push:
     branches: 
-      - main  # Automatically trigger on push to main
+      - main
       - feature
   pull_request:
     branches: 
-      - main  # Automatically trigger on pull requests to main
+      - main
 
 
 jobs:
