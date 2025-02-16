@@ -1,5 +1,5 @@
-# name: Docker Image build
-name: Manual workflow
+name: Docker Image build
+# name: Manual workflow
 # on:
 
 
