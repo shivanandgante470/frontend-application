@@ -7,13 +7,13 @@ on:
   # pull_request:
   #   branches: 
   #     - main  # Automatically trigger on pull requests to main
+  # workflow_dispatch:
+  #   inputs:
+  #     logLevel:
+  #       description: 'Select Environment'
+  #       required: true
+  #       default: 'dev'
   workflow_dispatch:
-    inputs:
-      logLevel:
-        description: 'Select Environment'
-        required: true
-        default: 'dev'
-
 jobs:
   build:
     runs-on: ubuntu-latest
